@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TrainerPro</string>
+    <string name="Usertv">User Name</string>
+    <string name="Userlog">JDOE</string>
+    <string name="passTv">Password</string>
+    <string name="PassedT">welcome1</string>
+    <string name="LoginBt">Login</string>
+    <string name="SuccfLogin">Logged  in successfully</string>
+    <string name="FailedLogin">Login Failed</string>
+
+</resources>
