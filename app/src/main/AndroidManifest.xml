@@ -32,6 +32,8 @@
         </activity>
         <activity android:name=".ListClients">
         </activity>
+        <activity android:name=".Generate_receipt">
+        </activity>
     </application>
 
 </manifest>

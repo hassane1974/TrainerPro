@@ -1,19 +1,17 @@
 package com.example.khouni.trainerpro;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class NewClient extends AppCompatActivity {
+public class Generate_receipt extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_client);
+        setContentView(R.layout.activity_generate_receipt);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -38,17 +36,16 @@ public class NewClient extends AppCompatActivity {
             startActivity(intentAddc);
             return true;
         }
-        if (id == R.id.item_add_session) {
-            super.onOptionsItemSelected(item);
-            Intent intentAdds = new Intent(this, NewSession.class);
-            startActivity(intentAdds);
-
-            return true;
-        }
         if (id == R.id.item_take_picture) {
             super.onOptionsItemSelected(item);
             Intent intentAddc = new Intent(this, TakePicture.class);
             startActivity(intentAddc);
+            return true;
+        }
+        if (id == R.id.item_add_session) {
+            super.onOptionsItemSelected(item);
+            Intent intentAdds = new Intent(this, NewSession.class);
+            startActivity(intentAdds);
             return true;
         }
         if (id == R.id.item_Marque_Session) {

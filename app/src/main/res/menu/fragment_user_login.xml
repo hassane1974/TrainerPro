@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <item
+            android:id="@+id/item_add_client"
+            android:title="Add Client" />
+    <item
+        android:id="@+id/item_take_picture"
+        android:title="Take Picture" />
+
+    <item
+        android:id="@+id/item_add_session"
+        android:title="Add Session" />
+    <item
+        android:id="@+id/item_Marque_Session"
+        android:title="Marque a Session" />
+    <item
+        android:id="@+id/item_view_C_session"
+        android:title="View Client Session" />
+    <item
+        android:id="@+id/item_billing"
+        android:title="Billing" />
+    <item
+        android:id="@+id/item_generate_reciept"
+        android:title="Generate a Receipt" />
+        <item
+            android:id="@+id/item_log_out"
+            android:title="Log out" />
+
+    </menu>
