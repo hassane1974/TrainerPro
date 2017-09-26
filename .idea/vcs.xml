@@ -4,8 +4,5 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$USER_HOME$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TrainerPro" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TrainerPro_Assignment_5" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/TrainerPro_ass_5" vcs="Git" />
   </component>
 </project>
