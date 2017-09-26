@@ -1,22 +1,67 @@
 package com.example.khouni.trainerpro;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.Button;
+import android.app.AlertDialog;
 public class ListClients extends AppCompatActivity {
-
+    Button btnviewAll;
+    DatabasesManage myDb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_clients);
+        myDb = new DatabasesManage(this);
+        btnviewAll = (Button)findViewById(R.id.listAllButton);
+        viewAll();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.fragment_user_login, menu);
         return true;
+    }
+
+    public void viewAll() {
+        btnviewAll.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Cursor res = myDb.getAllData();
+                        if(res.getCount() == 0) {
+                            // show message
+                            showMessage("Error","Nothing found");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+                        while (res.moveToNext()) {
+                            buffer.append("Id :"+ res.getString(0)+"\n");
+                            buffer.append("First Name :"+ res.getString(1)+"\n");
+                            buffer.append("Last name :"+ res.getString(2)+"\n");
+                            buffer.append("Address :"+ res.getString(3)+"\n");
+                            buffer.append("Sex :"+ res.getString(4)+"\n");
+                            buffer.append("D O B :"+ res.getString(5)+"\n");
+                            buffer.append("Phone:"+ res.getString(6)+"\n\n");
+                        }
+
+                        // Show all data
+                        showMessage("Data",buffer.toString());
+                    }
+                }
+        );
+    }
+
+    public void showMessage(String title,String Message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
     }
 
 
