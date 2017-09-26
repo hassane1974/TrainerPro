@@ -5,21 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.khouni.trainerpro.NewClient">
+    tools:context="com.example.khouni.trainerpro.NewClient"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <fragment
         android:id="@+id/fragment_place"
         android:name="com.example.khouni.trainerpro.UserLogin"
-        android:layout_width="388dp"
-        android:layout_height="55dp"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="-4dp"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="46dp"
@@ -27,12 +27,202 @@
         android:textSize="30dp"
         android:gravity="center"
         android:textColor="@color/colorAccent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
         android:layout_marginStart="3dp"
-        android:layout_marginEnd="3dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_place"
+        android:id="@+id/textView8"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/EtFname"
+        android:layout_marginTop="55dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="54dp"
+        app:layout_constraintLeft_toLeftOf="@+id/fragment_place"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFname"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="First Name"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/EtFname"
+        tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="170dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etAddress"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sex(M/F) :"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/etDob"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" D.O.B :"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/tvPhone"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Numb:"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="7dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eTPhoneNum"/>
+
+    <Button
+        android:id="@+id/btAddClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD Client"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/eTPhoneNum"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="0dp"/>
+
+    <EditText
+        android:id="@+id/EtFname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/tvLname"
+        app:layout_constraintRight_toRightOf="@+id/EtLname"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="@+id/EtLname"/>
+
+    <EditText
+        android:id="@+id/EtLname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/etDob"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/EtFname"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/etDob"/>
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="16dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSex"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="43dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintTop_toTopOf="@+id/tvLname"
+        app:layout_constraintLeft_toRightOf="@+id/tvAddress"/>
+
+    <EditText
+        android:id="@+id/etSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSex"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/tvSex"/>
+
+    <EditText
+        android:id="@+id/etDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="119dp"
+        app:layout_constraintTop_toBottomOf="@+id/EtLname"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/etSex"/>
+
+    <EditText
+        android:id="@+id/eTPhoneNum"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="phone"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/btAddClient"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/etDob"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageBut"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <ImageButton
+        android:id="@+id/imageBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:layout_marginStart="55dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/eTPhoneNum"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>
