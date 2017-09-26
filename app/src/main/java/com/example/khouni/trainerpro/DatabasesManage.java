@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.ContactsContract;
 
 import java.util.Date;
-
+import android.database.Cursor;
 /**
  * Created by khouni on 9/25/17.
  */
@@ -31,7 +31,11 @@ public class DatabasesManage extends SQLiteOpenHelper{
         db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,FNAME TEXT,LNAME TEXT,ADDRESS TEXT, SEX TEXT, DOB DATE, PHONE INTEGER" +
                 ")");
     }
-
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME,null);
+        return res;
+    }
 
 
 
