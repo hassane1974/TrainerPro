@@ -7,13 +7,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+import android.widget.Button;
+import android.widget.Toast;
+
 
 public class NewClient extends AppCompatActivity {
+    DatabasesManage myDb;
+    EditText editFName,editLname,editAddress ,editTextId ,editSex , editDob , editPhonenum ;
+    Button btnAddData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_client);
+        myDb = new DatabasesManage(this);
+        editFName = (EditText)findViewById(R.id.EtFname);
+        editLname = (EditText)findViewById(R.id.EtLname);
+        editAddress = (EditText)findViewById(R.id.etAddress);
+        editSex = (EditText)findViewById(R.id.etSex);
+        editDob = (EditText)findViewById(R.id.etDob);
+        editPhonenum = (EditText)findViewById(R.id.eTPhoneNum);
+        //editTextId = (EditText)findViewById(R.id.e);
+        btnAddData = (Button)findViewById(R.id.btAddClient);
+
+        AddData();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,4 +98,21 @@ public class NewClient extends AppCompatActivity {
         }
         return true;
     }
+    public  void AddData() {
+        btnAddData.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isInserted = myDb.insertData(editFName.getText().toString(),
+                                editLname.getText().toString(),
+                                editAddress.getText().toString(), editSex.getText().toString(), editDob.getText().toString(), editPhonenum.getText().toString() );
+                        if(isInserted == true)
+                            Toast.makeText(NewClient.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(NewClient.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+    }
+
 }
